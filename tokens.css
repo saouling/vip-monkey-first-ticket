@@ -9,12 +9,13 @@
   --c-ink-2: #5C5F63;          /* secondary text, 6.4:1 on white */
   --c-line: #E1E3E6;
   --c-line-strong: #0C0C0C;
+  --c-field-line: #8C8F93;     /* field and option borders, 3.25:1 on white (WCAG 1.4.11) */
   --c-canvas: #F4F4F6;
   --c-surface: #FFFFFF;
   --c-disabled: #E4E5E7;
   --c-disabled-ink: #6B6E73;
   --c-tabbar: #0C0C0C;
-  --c-tab-idle: #A9ACB1;       /* 8.4:1 on the tab bar */
+  --c-tab-idle: #A9ACB1;       /* 8.6:1 on the tab bar */
   --c-danger: #B42318;
   --c-danger-wash: #FDECEA;
   --c-warning-ink: #8A4B00;

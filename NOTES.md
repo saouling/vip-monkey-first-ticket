@@ -49,3 +49,15 @@ Not fixed, by Nikos's choice (the brief isn't asking for a final solution):
 Apple Pay is left out; the PDF will explain why.
 
 **Not run yet:** `/impeccable audit`, `/impeccable polish`, the finish reviewer, and DESIGN.md. The direction contract's FINISH line says the build isn't finished until those have been done.
+
+**`/impeccable audit`**, quick web audit: 16/20, Good. The native (Xcode) audit doesn't apply because this is HTML simulating iOS, so VoiceOver, Dynamic Type and gestures on a real phone are untested.
+
+Fixed:
+- **[P1]** Field and payment-option borders were too faint. They now use a new token, `--c-field-line` #8C8F93, at 3.25:1.
+- **[P2]** Loading spinners kept turning slowly under reduced motion instead of freezing.
+- **[P2]** The small link line in the chat mock-up went from 4.2:1 to 5.9:1.
+
+Left as P3:
+- The prototype demo buttons are 36 pt tall.
+- The switch's pale track in the off state.
+- The hold can only be renewed after it runs out.
