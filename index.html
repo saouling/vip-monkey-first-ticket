@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Första biljetten · VIP Monkey-förslag</title>
+<meta name="description" content="A clickable design proposal for VIP Monkey by Nikos Saoulidis: from a shared link to a ticket in the app. Concept, not VIP Monkey's app.">
+<meta name="theme-color" content="#F4F4F6">
+<link rel="icon" href="assets/monkey-head.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Anton&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="poster-hostrus" viewBox="0 0 358 200">
+    <rect width="358" height="200" fill="#1B1330"/>
+    <circle cx="300" cy="40" r="120" fill="#FF5A36"/>
+    <circle cx="300" cy="40" r="78" fill="#FFB02E"/>
+    <text x="18" y="132" font-family="Anton, Impact, sans-serif" font-size="104" fill="#F4EFE6" textLength="322" lengthAdjust="spacingAndGlyphs">HÖSTRUS</text>
+    <text x="20" y="170" font-family="Montserrat, sans-serif" font-weight="700" font-size="14" fill="#F4EFE6" letter-spacing="3">FRE 16.10 · MAGASIN TOLV</text>
+    <text x="20" y="188" font-family="Montserrat, sans-serif" font-weight="600" font-size="11" fill="#F4EFE6" fill-opacity=".72" letter-spacing="2">KVÄLLSKOLLEKTIVET PRESENTERAR</text>
+  </symbol>
+  <symbol id="poster-vinyl" viewBox="0 0 300 375">
+    <rect width="300" height="375" fill="#EDE6D6"/>
+    <g fill="none" stroke="#1C1C1C" stroke-width="1.2"><circle cx="150" cy="150" r="112"/><circle cx="150" cy="150" r="96"/><circle cx="150" cy="150" r="80"/><circle cx="150" cy="150" r="64"/></g>
+    <circle cx="150" cy="150" r="30" fill="#C8412B"/>
+    <text x="150" y="312" text-anchor="middle" font-family="DM Serif Display, serif" font-style="italic" font-size="46" fill="#1C1C1C">Vinylkväll</text>
+  </symbol>
+  <symbol id="poster-nolle" viewBox="0 0 300 375">
+    <rect width="300" height="375" fill="#2438FF"/>
+    <text x="20" y="120" font-family="Montserrat, sans-serif" font-weight="800" font-size="64" fill="#C6FF3D">NOLL</text>
+    <text x="20" y="180" font-family="Montserrat, sans-serif" font-weight="800" font-size="64" fill="#C6FF3D">NINGS</text>
+    <text x="20" y="240" font-family="Montserrat, sans-serif" font-weight="800" font-size="64" fill="#FFFFFF">FEST</text>
+  </symbol>
+  <symbol id="i-alert-circle" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 8v4" /><path d="M12 16h.01" /></symbol>
+  <symbol id="i-brand-apple" viewBox="0 0 24 24"><path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z" /><path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" /></symbol>
+  <symbol id="i-brand-google" viewBox="0 0 24 24"><path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" /></symbol>
+  <symbol id="i-calendar-event" viewBox="0 0 24 24"><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2z" /></symbol>
+  <symbol id="i-calendar-plus" viewBox="0 0 24 24"><path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M16 19h6" /><path d="M19 16v6" /></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5l10 -10" /></symbol>
+  <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="M15 6l-6 6l6 6" /></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6l-6 6" /></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 7v5l3 3" /></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><path d="M8 16l2 -6l6 -2l-2 6l-6 2" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 3l0 2" /><path d="M12 19l0 2" /><path d="M3 12l2 0" /><path d="M19 12l2 0" /></symbol>
+  <symbol id="i-credit-card" viewBox="0 0 24 24"><path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M3 10l18 0" /><path d="M7 15l.01 0" /><path d="M11 15l2 0" /></symbol>
+  <symbol id="i-device-mobile" viewBox="0 0 24 24"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" /><path d="M11 4h2" /><path d="M12 17v.01" /></symbol>
+  <symbol id="i-id-badge-2" viewBox="0 0 24 24"><path d="M7 12h3v4h-3z" /><path d="M10 6h-6a1 1 0 0 0 -1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1 -1v-12a1 1 0 0 0 -1 -1h-6" /><path d="M10 3m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" /><path d="M14 16h2" /><path d="M14 12h4" /></symbol>
+  <symbol id="i-info-circle" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 9h.01" /><path d="M11 12h1v4h1" /></symbol>
+  <symbol id="i-language" viewBox="0 0 24 24"><path d="M4 5h7" /><path d="M9 3v2c0 4.418 -2.239 8 -5 8" /><path d="M5 9c0 2.144 2.952 3.908 6.7 4" /><path d="M12 20l4 -9l4 9" /><path d="M19.1 18h-6.2" /></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12l14 0" /></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5l0 14" /><path d="M5 12l14 0" /></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" /><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" /></symbol>
+  <symbol id="i-share-2" viewBox="0 0 24 24"><path d="M8 9h-1a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-8a2 2 0 0 0 -2 -2h-1" /><path d="M12 14v-11" /><path d="M9 6l3 -3l3 3" /></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /><path d="M15 19l2 2l4 -4" /></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></symbol>
+  <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M15 5l0 2" /><path d="M15 11l0 2" /><path d="M15 17l0 2" /><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" /></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></symbol>
+</svg>
+
+<div class="stage">
+
+  <aside class="panel" aria-labelledby="panel-title">
+    <div class="panel-top">
+      <h1 id="panel-title" data-i18n="panel.title">Första biljetten</h1>
+      <div class="lang" role="group" aria-label="Språk / Language">
+        <button type="button" class="lang-btn" data-lang="sv" aria-pressed="true">SV</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+    <p class="panel-lede" data-i18n="panel.lede"></p>
+    <p class="panel-hint" data-i18n="panel.hint"></p>
+    <h2 class="panel-h" data-i18n="panel.steps"></h2>
+    <ol class="steps">
+      <li><button type="button" data-go="chat"><span class="n">1</span><span data-i18n="step.1"></span></button></li>
+      <li><button type="button" data-go="web"><span class="n">2</span><span data-i18n="step.2"></span></button></li>
+      <li><button type="button" data-go="open"><span class="n">3</span><span data-i18n="step.3"></span></button></li>
+      <li><button type="button" data-go="event"><span class="n">4</span><span data-i18n="step.4"></span></button></li>
+      <li><button type="button" data-go="checkout"><span class="n">5</span><span data-i18n="step.5"></span></button></li>
+      <li><button type="button" data-go="swish"><span class="n">6</span><span data-i18n="step.6"></span></button></li>
+      <li><button type="button" data-go="done"><span class="n">7</span><span data-i18n="step.7"></span></button></li>
+      <li><button type="button" data-go="ticket"><span class="n">8</span><span data-i18n="step.8"></span></button></li>
+      <li class="step-b"><button type="button" data-go="b1"><span class="n">B</span><span data-i18n="step.B"></span></button><p data-i18n="panel.bnote"></p></li>
+    </ol>
+    <div class="panel-actions">
+      <button type="button" class="link-btn" data-go="chat" data-reset><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="panel.reset"></span></button>
+      <a class="link-btn" href="system.html"><span data-i18n="panel.system"></span><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></a>
+    </div>
+    <p class="panel-note" data-i18n="panel.note"></p>
+    <p class="panel-credit" data-i18n="panel.credit"></p>
+  </aside>
+
+  <div class="device">
+    <div class="screen" id="screen">
+
+      <div class="statusbar" aria-hidden="true">
+        <span class="sb-time" id="sb-time">14:12</span>
+        <span class="sb-icons">
+          <svg viewBox="0 0 18 12" width="18" height="12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="6" width="3" height="6" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+          <svg viewBox="0 0 16 12" width="16" height="12"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0zM3.5 6.9a6.4 6.4 0 0 1 9 0l-1.4 1.4a4.4 4.4 0 0 0-6.2 0zM1.3 4.7a9.5 9.5 0 0 1 13.4 0l-1.4 1.4a7.5 7.5 0 0 0-10.6 0z"/></svg>
+          <svg viewBox="0 0 27 12" width="27" height="12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" stroke-opacity=".4"/><rect x="2" y="2" width="16" height="8" rx="2"/><rect x="24.5" y="4" width="2" height="4" rx="1" fill-opacity=".4"/></svg>
+        </span>
+      </div>
+
+      <!-- 1. iMessage -->
+      <section class="view view-chat" data-view="chat" aria-label="iMessage">
+        <header class="chat-head">
+          <button type="button" class="icon-btn chat-back" data-i18n-attr="aria-label:chat.back"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+          <div class="chat-who">
+            <span class="avatars" aria-hidden="true"><i>S</i><i>O</i></span>
+            <b data-i18n="chat.group"></b>
+            <small data-i18n="chat.members"></small>
+          </div>
+        </header>
+        <div class="chat-body">
+          <p class="chat-time">14:09</p>
+          <div class="msg in"><span class="msg-name">Sara</span><p data-i18n="chat.m1"></p></div>
+          <button type="button" class="msg in link-card" data-go="web" aria-describedby="lc-sub">
+            <svg class="lc-img" viewBox="0 0 358 200" aria-hidden="true"><use href="#poster-hostrus"/></svg>
+            <span class="lc-foot">
+              <b data-i18n="chat.preview.title"></b>
+              <span id="lc-sub" data-i18n="chat.preview.sub"></span>
+              <small>ticket.vipmonkey.se</small>
+            </span>
+          </button>
+          <div class="msg in"><span class="msg-name">Omar</span><p data-i18n="chat.m2"></p></div>
+        </div>
+        <div class="chat-input" aria-hidden="true"><span class="ci-plus">+</span><span class="ci-field" data-i18n="chat.input"></span></div>
+      </section>
+
+      <!-- 2. Web event page (Safari) -->
+      <section class="view view-web" data-view="web" aria-label="Safari">
+        <div class="scroll web-scroll">
+          <p class="web-badge"><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg><span data-i18n="web.badge"></span></p>
+          <svg class="poster-card" viewBox="0 0 358 200" role="img" aria-label="Höstrus, fredag 16 oktober, Magasin Tolv"><use href="#poster-hostrus"/></svg>
+          <h2 class="ev-title">Höstrus</h2>
+          <p class="ev-org" data-i18n="ev.org"></p>
+          <ul class="facts">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-calendar-event"/></svg><div><b data-i18n="ev.date"></b><small data-i18n="ev.date.sub"></small></div></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg><div><b data-i18n="ev.venue"></b><small data-i18n="ev.venue.sub"></small></div></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-id-badge-2"/></svg><div><b data-i18n="ev.age"></b><small data-i18n="ev.age.sub"></small></div></li>
+          </ul>
+          <div class="web-price"><span><b data-i18n="ev.ticket"></b></span><span class="price">225 kr<small data-i18n="ev.incl"></small></span></div>
+          <button type="button" class="btn btn-primary btn-block" data-go="store"><span data-i18n="web.cta"></span></button>
+          <p class="web-sub" data-i18n="web.cta.sub"></p>
+          <p class="web-why"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg><span data-i18n="web.why"></span></p>
+          <button type="button" class="text-btn web-orb" data-go="b1"><span data-i18n="web.orB"></span></button>
+        </div>
+        <div class="safari-bar" aria-hidden="true"><span class="sf-pill"><svg class="ic ic-sm"><use href="#i-lock"/></svg>ticket.vipmonkey.se</span></div>
+
+        <div class="store-sheet" id="store" role="dialog" aria-modal="true" aria-labelledby="store-name" hidden>
+          <div class="store-card">
+            <img src="assets/monkey-head.png" alt="" class="store-icon" width="72" height="72">
+            <div class="store-txt"><b id="store-name">VIP Monkey</b><small data-i18n="store.sub"></small></div>
+            <button type="button" class="store-get" id="store-get"><span data-i18n="store.get"></span></button>
+          </div>
+          <p class="store-note" data-i18n="store.note"></p>
+        </div>
+      </section>
+
+      <!-- 3. First open -->
+      <section class="view view-open" data-view="open" aria-labelledby="open-title">
+        <div class="scroll open-scroll">
+          <img src="assets/monkey-head.png" alt="VIP Monkey" class="open-mark" width="56" height="56">
+          <h2 class="open-title" id="open-title" data-i18n="open.title"></h2>
+          <p class="open-sub" data-i18n="open.sub"></p>
+          <div class="carry-card">
+            <svg class="cc-thumb" viewBox="0 0 358 200" aria-hidden="true"><use href="#poster-hostrus"/></svg>
+            <div><small data-i18n="open.card"></small><b>Höstrus</b><span><span data-i18n="ev.date"></span> · 225 kr</span></div>
+          </div>
+          <div class="auth">
+            <button type="button" class="btn btn-auth btn-apple" data-auth="apple"><svg class="ic" aria-hidden="true"><use href="#i-brand-apple"/></svg><span data-i18n="open.apple"></span></button>
+            <button type="button" class="btn btn-auth btn-outline" data-auth="google"><svg class="ic" aria-hidden="true"><use href="#i-brand-google"/></svg><span data-i18n="open.google"></span></button>
+            <button type="button" class="btn btn-auth btn-outline btn-bankid" data-auth="bankid" aria-describedby="bankid-note"><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg><span class="ba-txt"><span data-i18n="open.bankid"></span><small id="bankid-note" data-i18n="open.bankid.note"></small></span></button>
+            <button type="button" class="text-btn" id="email-toggle" aria-expanded="false" aria-controls="email-form"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><span data-i18n="open.email"></span></button>
+            <form class="email-form" id="email-form" novalidate hidden>
+              <label class="field-label" for="email" data-i18n="open.email.label"></label>
+              <input class="field" id="email" type="email" autocomplete="email" inputmode="email" placeholder="alex.lind@exempel.se" aria-describedby="email-err">
+              <p class="field-err" id="email-err" role="alert" hidden data-i18n="open.email.err"></p>
+              <button type="submit" class="btn btn-primary btn-block"><span data-i18n="open.email.cta"></span></button>
+            </form>
+          </div>
+          <p class="open-terms" data-i18n="open.terms"></p>
+        </div>
+      </section>
+
+      <!-- 4. Event page in the app, with the checkout sheet over it -->
+      <section class="view view-event" data-view="event" aria-labelledby="ev-title">
+        <div class="event-page" id="event-page">
+        <div class="scroll event-scroll" id="event-scroll">
+          <svg class="poster-card" viewBox="0 0 358 200" role="img" aria-label="Höstrus, fredag 16 oktober, Magasin Tolv"><use href="#poster-hostrus"/></svg>
+          <div class="ev-titlerow">
+            <div><h2 class="ev-title" id="ev-title">Höstrus</h2><p class="ev-org" data-i18n="ev.org"></p></div>
+            <button type="button" class="icon-btn share-btn" data-i18n-attr="aria-label:ev.share"><svg class="ic" aria-hidden="true"><use href="#i-share-2"/></svg></button>
+          </div>
+          <ul class="facts">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-calendar-event"/></svg><div><b data-i18n="ev.date"></b><small data-i18n="ev.date.sub"></small></div></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg><div><b data-i18n="ev.venue"></b><small data-i18n="ev.venue.sub"></small></div></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-id-badge-2"/></svg><div><b data-i18n="ev.age"></b><small data-i18n="ev.age.sub"></small></div></li>
+          </ul>
+          <div class="ticket-row">
+            <div class="tr-top"><b data-i18n="ev.ticket"></b><span class="price">225 kr<small data-i18n="ev.incl"></small></span></div>
+            <p class="tr-rule"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="ev.max"></span></p>
+          </div>
+          <p class="asks"><svg class="ic" aria-hidden="true"><use href="#i-info-circle"/></svg><span data-i18n="ev.asks"></span></p>
+          <h3 class="about-h" data-i18n="ev.about"></h3>
+          <p class="about" data-i18n="ev.desc"></p>
+        </div>
+        <div class="cta-bar"><button type="button" class="btn btn-primary btn-block" data-go="checkout" id="cta-btn"><span id="cta-label" data-i18n="ev.cta"></span></button></div>
+        </div>
+
+        <div class="scrim" id="scrim" hidden></div>
+        <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+          <div class="grabber" aria-hidden="true"></div>
+
+          <!-- 5. checkout -->
+          <form class="pane pane-checkout" data-pane="checkout" novalidate>
+            <div class="sheet-head">
+              <h2 id="sheet-title" data-i18n="co.title"></h2>
+              <button type="button" class="icon-btn close-btn" data-close data-i18n-attr="aria-label:co.close"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+            </div>
+            <div class="sheet-scroll">
+              <div class="hold" id="hold" role="timer" aria-live="off">
+                <svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>
+                <div><b id="hold-text"></b><small data-i18n="co.hold.sub"></small></div>
+              </div>
+              <div class="hold hold-expired" id="hold-expired" role="alert" hidden>
+                <svg class="ic" aria-hidden="true"><use href="#i-alert-circle"/></svg>
+                <div><b data-i18n="co.hold.expired"></b><button type="button" class="text-btn" id="hold-again"><span data-i18n="co.hold.again"></span></button></div>
+              </div>
+
+              <div class="sheet-event">
+                <svg class="cc-thumb" viewBox="0 0 358 200" aria-hidden="true"><use href="#poster-hostrus"/></svg>
+                <div><b>Höstrus</b><span><span data-i18n="ev.date"></span> · <span data-i18n="ev.ticket"></span></span></div>
+              </div>
+
+              <fieldset class="group">
+                <legend data-i18n="co.pay"></legend>
+                <div class="pay-options">
+                  <label class="pay-opt"><input type="radio" name="pay" value="swish" checked><span class="po-box"><b data-i18n="co.swish"></b><small data-i18n="co.swish.sub"></small></span></label>
+                  <label class="pay-opt"><input type="radio" name="pay" value="card"><span class="po-box"><svg class="ic" aria-hidden="true"><use href="#i-credit-card"/></svg><b data-i18n="co.card"></b><small data-i18n="co.card.sub"></small></span></label>
+                </div>
+              </fieldset>
+              <fieldset class="group" id="age-group">
+                <legend data-i18n="co.age"></legend>
+                <div id="age-input-wrap">
+                  <div class="dob" role="group" aria-describedby="dob-help dob-err">
+                    <select class="field sel" id="dob-d" data-i18n-attr="aria-label:co.day"></select>
+                    <select class="field sel" id="dob-m" data-i18n-attr="aria-label:co.month"></select>
+                    <select class="field sel" id="dob-y" data-i18n-attr="aria-label:co.year"></select>
+                  </div>
+                  <p class="field-help" id="dob-help" data-i18n="co.age.help"></p>
+                  <p class="field-err" id="dob-err" role="alert" hidden></p>
+                </div>
+                <p class="verified" id="age-ok" hidden><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg><span data-i18n="co.age.ok"></span></p>
+              </fieldset>
+
+              <fieldset class="group">
+                <legend data-i18n="co.q"></legend>
+                <label class="field-label" for="school" data-i18n="co.school"></label>
+                <input class="field" id="school" type="text" autocomplete="organization" aria-describedby="school-help school-err">
+                <label class="switch-row"><span data-i18n="co.school.none"></span><input type="checkbox" role="switch" id="no-school" class="switch"></label>
+                <p class="field-help" id="school-help" data-i18n="co.school.help"></p>
+                <p class="field-err" id="school-err" role="alert" hidden data-i18n="co.school.err"></p>
+
+                <p class="field-label" id="allergy-label" data-i18n="co.allergy"></p>
+                <div class="seg" role="radiogroup" aria-labelledby="allergy-label">
+                  <label><input type="radio" name="allergy" value="no" checked><span data-i18n="co.no"></span></label>
+                  <label><input type="radio" name="allergy" value="yes"><span data-i18n="co.yes"></span></label>
+                </div>
+                <div id="allergy-more" hidden>
+                  <label class="field-label" for="allergy-text" data-i18n="co.allergy.detail"></label>
+                  <input class="field" id="allergy-text" type="text" aria-describedby="allergy-err">
+                  <p class="field-err" id="allergy-err" role="alert" hidden data-i18n="co.allergy.err"></p>
+                </div>
+              </fieldset>
+
+
+            </div>
+            <div class="sheet-foot">
+              <p class="field-err form-err" id="form-err" role="alert" hidden></p>
+              <div class="pay-sum"><span><b id="sum-method" data-i18n="co.swish"></b><small data-i18n="co.split"></small></span><b class="pay-sum-total">225 kr</b></div>
+              <button type="submit" class="btn btn-primary btn-block" id="pay-btn"><span id="pay-label" data-i18n="co.btn.swish"></span></button>
+            </div>
+          </form>
+
+          <!-- 6. Swish -->
+          <div class="pane pane-swish" data-pane="swish" hidden>
+            <div class="sheet-head">
+              <h2 data-i18n="sw.title" tabindex="-1" id="swish-title"></h2>
+              <button type="button" class="icon-btn close-btn" data-confirm-cancel data-i18n-attr="aria-label:co.close"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+            </div>
+            <div class="sheet-event swish-event">
+              <svg class="cc-thumb" viewBox="0 0 358 200" aria-hidden="true"><use href="#poster-hostrus"/></svg>
+              <div><b>Höstrus</b><span><span data-i18n="ev.date"></span> · <span data-i18n="ev.ticket"></span></span></div>
+            </div>
+            <div class="swish-body">
+              <div class="spinner" aria-hidden="true"></div>
+              <p class="swish-amount">225 kr</p>
+              <p class="swish-text" id="swish-text" data-i18n="sw.body"></p>
+              <p class="hold-inline" id="swish-hold"></p>
+              <div class="swish-err" id="swish-err" role="alert" hidden><svg class="ic" aria-hidden="true"><use href="#i-alert-circle"/></svg><span id="swish-err-text"></span></div>
+            </div>
+            <div class="sheet-foot">
+              <button type="button" class="btn btn-primary btn-block" id="swish-open"><span data-i18n="sw.open"></span></button>
+              <button type="button" class="btn btn-primary btn-block" id="swish-retry" hidden><span data-i18n="sw.retry"></span></button>
+              <button type="button" class="text-btn center" data-confirm-cancel><span data-i18n="sw.cancel"></span></button>
+              <div class="demo" role="group" aria-labelledby="demo-l">
+                <p id="demo-l" data-i18n="sw.demo"></p>
+                <div><button type="button" class="demo-btn" id="demo-ok"><span data-i18n="sw.demo.ok"></span></button><button type="button" class="demo-btn" id="demo-no"><span data-i18n="sw.demo.no"></span></button></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert-scrim" id="cancel-confirm" hidden>
+            <div class="alert" role="alertdialog" aria-modal="true" aria-labelledby="cc-t" aria-describedby="cc-b">
+              <h3 id="cc-t" data-i18n="co.cancel.q"></h3>
+              <p id="cc-b" data-i18n="co.cancel.body"></p>
+              <button type="button" class="alert-btn danger" id="cancel-yes"><span data-i18n="co.cancel.yes"></span></button>
+              <button type="button" class="alert-btn strong" id="cancel-no"><span data-i18n="co.cancel.no"></span></button>
+            </div>
+          </div>
+
+          <!-- 7. Done: the sheet becomes the ticket -->
+          <div class="pane pane-done" data-pane="done" hidden>
+            <div class="done-head">
+              <span class="done-check" aria-hidden="true"><svg class="ic"><use href="#i-check"/></svg></span>
+              <h2 data-i18n="done.title" tabindex="-1" id="done-title"></h2>
+              <p data-i18n="done.sub"></p>
+            </div>
+            <div class="ticket" id="done-ticket"></div>
+            <div class="sheet-foot">
+              <button type="button" class="btn btn-primary btn-block" data-go="ticket"><span data-i18n="done.show"></span></button>
+              <button type="button" class="btn btn-outline btn-block" id="add-cal"><svg class="ic" aria-hidden="true"><use href="#i-calendar-plus"/></svg><span data-i18n="done.cal"></span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tickets tab -->
+      <section class="view view-tickets" data-view="tickets" aria-labelledby="tix-title">
+        <div class="scroll">
+          <h2 class="large-title" id="tix-title" data-i18n="tix.title"></h2>
+          <h3 class="list-h" data-i18n="tix.upcoming"></h3>
+          <button type="button" class="tix-card" data-go="ticket">
+            <svg class="cc-thumb" viewBox="0 0 358 200" aria-hidden="true"><use href="#poster-hostrus"/></svg>
+            <span><b>Höstrus</b><span data-i18n="ev.date"></span><small data-i18n="tix.count"></small></span>
+            <svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- 8. The ticket at the door -->
+      <section class="view view-ticket" data-view="ticket" aria-labelledby="tk-title">
+        <div class="navbar">
+          <button type="button" class="nav-back" data-go="tickets"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-chevron-left"/></svg><span data-i18n="tk.back"></span></button>
+          <h2 class="nav-title" id="tk-title" data-i18n="tk.title"></h2>
+          <span></span>
+        </div>
+        <div class="scroll ticket-scroll">
+          <div class="ticket" id="door-ticket"></div>
+          <p class="tk-bright"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg><span data-i18n="tk.bright"></span></p>
+        </div>
+      </section>
+
+      <!-- B1. Web checkout -->
+      <section class="view view-web view-b" data-view="b1" aria-labelledby="b-title">
+        <div class="scroll web-scroll">
+          <div class="sheet-event">
+            <svg class="cc-thumb" viewBox="0 0 358 200" aria-hidden="true"><use href="#poster-hostrus"/></svg>
+            <div><b>Höstrus</b><span><span data-i18n="ev.date"></span> · <span data-i18n="ev.ticket"></span></span></div>
+          </div>
+          <h2 class="b-title" id="b-title" data-i18n="b.title"></h2>
+          <form id="b-form" novalidate>
+            <label class="field-label" for="b-phone" data-i18n="b.phone"></label>
+            <div class="phone-field"><span>+46</span><input class="field" id="b-phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="70 123 45 67" aria-describedby="b-phone-help b-phone-err"></div>
+            <p class="field-help" id="b-phone-help" data-i18n="b.phone.help"></p>
+            <p class="field-err" id="b-phone-err" role="alert" hidden data-i18n="b.phone.err"></p>
+            <div id="b-code-wrap" hidden>
+              <label class="field-label" for="b-code" data-i18n="b.code"></label>
+              <input class="field code" id="b-code" type="text" inputmode="numeric" autocomplete="one-time-code" value="4 8 1 6" aria-describedby="b-code-help">
+              <p class="field-help" id="b-code-help" data-i18n="b.code.help"></p>
+            </div>
+            <dl class="summary">
+              <div><dt data-i18n="co.line"></dt><dd>200 kr</dd></div>
+              <div><dt data-i18n="co.fee"></dt><dd>25 kr</dd></div>
+              <div class="sum-total"><dt data-i18n="co.total"></dt><dd>225 kr</dd></div>
+            </dl>
+            <button type="submit" class="btn btn-primary btn-block" id="b-submit"><span id="b-submit-label" data-i18n="b.send"></span></button>
+          </form>
+        </div>
+        <div class="safari-bar" aria-hidden="true"><span class="sf-pill"><svg class="ic ic-sm"><use href="#i-lock"/></svg>ticket.vipmonkey.se</span></div>
+      </section>
+
+      <!-- B2. Web confirmation -->
+      <section class="view view-web view-b" data-view="b2" aria-labelledby="b2-title">
+        <div class="scroll web-scroll b2">
+          <span class="done-check" aria-hidden="true"><svg class="ic"><use href="#i-check"/></svg></span>
+          <h2 class="b-title" id="b2-title" data-i18n="b.done" tabindex="-1"></h2>
+          <p class="web-sub" data-i18n="b.done.sub"></p>
+          <button type="button" class="btn btn-primary btn-block" data-go="tickets"><span data-i18n="b.get"></span></button>
+        </div>
+        <div class="safari-bar" aria-hidden="true"><span class="sf-pill"><svg class="ic ic-sm"><use href="#i-lock"/></svg>ticket.vipmonkey.se</span></div>
+      </section>
+
+      <nav class="tabbar" id="tabbar" aria-label="Huvudmeny" hidden>
+        <button type="button" class="tab" data-tab="event" aria-current="page"><img src="assets/monkey-head.png" alt="" class="tab-monkey" width="30" height="30"><span data-i18n="tab.discover"></span></button>
+        <button type="button" class="tab" data-tab="tickets"><svg class="ic" aria-hidden="true"><use href="#i-ticket"/></svg><span data-i18n="tab.tickets"></span></button>
+        <button type="button" class="tab" data-tab="profile" disabled><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="tab.profile"></span></button>
+      </nav>
+
+      <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+      <div class="home-ind" aria-hidden="true"></div>
+    </div>
+  </div>
+</div>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

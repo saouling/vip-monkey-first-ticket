@@ -1,0 +1,57 @@
+/* VIP Monkey, evolved: design tokens (a proposal, not VIP Monkey's own spec) */
+:root {
+  /* colour roles */
+  --c-brand: #00E8B0;          /* brand surface + primary action fill; ink on it is 12.3:1 */
+  --c-brand-hover: #00D4A1;
+  --c-brand-ink: #006B4F;      /* mint as text/icon on light surfaces, 6.5:1 on white */
+  --c-brand-wash: #E6FBF5;
+  --c-ink: #0C0C0C;            /* text, indicators, tab bar */
+  --c-ink-2: #5C5F63;          /* secondary text, 6.4:1 on white */
+  --c-line: #E1E3E6;
+  --c-line-strong: #0C0C0C;
+  --c-canvas: #F4F4F6;
+  --c-surface: #FFFFFF;
+  --c-disabled: #E4E5E7;
+  --c-disabled-ink: #6B6E73;
+  --c-tabbar: #0C0C0C;
+  --c-tab-idle: #A9ACB1;       /* 8.4:1 on the tab bar */
+  --c-danger: #B42318;
+  --c-danger-wash: #FDECEA;
+  --c-warning-ink: #8A4B00;
+  --c-warning-wash: #FFF4E5;
+  --c-scrim: rgb(12 12 12 / .42);
+
+  /* type: Montserrat for display moments, the platform face for reading */
+  --f-display: "Montserrat", system-ui, sans-serif;
+  --f-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+  --t-large: 34px;   /* Large Title */
+  --t-title: 24px;   /* Title 2, in Montserrat */
+  --t-headline: 17px;
+  --t-body: 17px;
+  --t-callout: 16px;
+  --t-sub: 15px;
+  --t-foot: 13px;
+  --t-caption: 12px;
+
+  /* space (4 pt grid) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px;
+
+  /* shape */
+  --r-pill: 999px;
+  --r-card: 20px;
+  --r-field: 12px;
+  --r-sheet: 16px;
+
+  /* size */
+  --tap: 44px;
+  --btn-h: 52px;
+  --tabbar-h: 83px;
+  --status-h: 47px;
+
+  /* depth and motion */
+  --shadow-card: 0 1px 2px rgb(12 12 12 / .06), 0 8px 24px rgb(12 12 12 / .08);
+  --shadow-sheet: 0 -8px 32px rgb(12 12 12 / .16);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --dur-fast: 160ms;
+  --dur-sheet: 420ms;
+}
