@@ -48,7 +48,7 @@ Not fixed, by Nikos's choice (the brief isn't asking for a final solution):
 
 Apple Pay is left out; the PDF will explain why.
 
-**Not run yet:** `/impeccable audit`, `/impeccable polish`, the finish reviewer, and DESIGN.md. The direction contract's FINISH line says the build isn't finished until those have been done.
+**Not run, by choice (see below):** `/impeccable polish`, the finish reviewer, and DESIGN.md. The direction contract's FINISH line says a full Impeccable run needs them.
 
 **`/impeccable audit`**, quick web audit: 16/20, Good. The native (Xcode) audit doesn't apply because this is HTML simulating iOS, so VoiceOver, Dynamic Type and gestures on a real phone are untested.
 
