@@ -19,7 +19,7 @@ window.STRINGS = {
     "panel.reset": "Börja om",
     "panel.system": "Designsystemet",
     "panel.note": "Konceptförslag, inte VIP Monkeys app. Event, platser och personer är påhittade.",
-    "panel.credit": "Designad av Nikos Saoulidis. Prototypen är byggd med Claude Code.",
+    "panel.credit": "Designad av Nikos Saoulidis. Prototypen är byggd med Claude Code. © 2026 Nikos Saoulidis. Delas med VIP Monkey som en del av min jobbansökan. Hör gärna av er innan ni använder den till något annat än att bedöma ansökan.",
     "panel.hint": "Klicka dig igenom i telefonen, eller hoppa till ett steg här.",
 
     "chat.group": "Fredagsgänget",
@@ -186,7 +186,7 @@ window.STRINGS = {
     "panel.reset": "Start over",
     "panel.system": "Design system",
     "panel.note": "Concept proposal, not VIP Monkey's app. Events, venues and people are invented.",
-    "panel.credit": "Designed by Nikos Saoulidis. Prototype built with Claude Code.",
+    "panel.credit": "Designed by Nikos Saoulidis. Prototype built with Claude Code. © 2026 Nikos Saoulidis. Shared with VIP Monkey as part of my job application. Please ask me before using it for anything beyond reviewing the application.",
     "panel.hint": "Click through on the phone, or jump to a step here.",
 
     "chat.group": "Friday crew",

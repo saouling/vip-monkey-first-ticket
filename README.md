@@ -4,6 +4,8 @@ A clickable prototype of one flow for the VIP Monkey iPhone app: from an event l
 
 **Designed by Nikos Saoulidis. Prototype built with Claude Code.** This is an unsolicited concept for a job application, not VIP Monkey's app. The VIP Monkey name and monkey mark belong to VIP-Monkey AB and appear here only because the proposal is addressed to them. All events, venues, organisers and people are invented.
 
+© 2026 Nikos Saoulidis. All rights reserved, see `LICENSE`. Shared with VIP Monkey as part of my job application; please ask before using it for anything beyond reviewing the application.
+
 ## Run it
 
 Plain HTML, CSS and JavaScript, with no build step and no dependencies (fonts load from Google Fonts).
